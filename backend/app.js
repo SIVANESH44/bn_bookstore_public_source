@@ -20,7 +20,7 @@ var app = express();
 
 // Database connection
 var mongoose = require("mongoose");
-var mongoDB = process.env.MONGODB_CONNECTION_URL;
+var mongoDB = "mongodb+srv://admin:admin@bookstore.gcs9ftg.mongodb.net/?retryWrites=true&w=majority";
 mongoose.connect(mongoDB, { useNewUrlParser: true, useUnifiedTopology: true });
 var db = mongoose.connection;
 db.on("error", console.error.bind(console, "MongoDB connection error..."));
